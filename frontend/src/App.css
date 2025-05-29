@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #eef6fc;
+}
+
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.view-button {
+  margin: 10px 0 20px;
+  padding: 10px 20px;
+  background-color: #ff4f9a;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.gallery {
+  /* display: grid;
+  gap: 30px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap:10px;
+}
+
+.category h2 {
+  margin-bottom: 10px;
+}
+/* .media{
+  height: 50px;
+  width: 100px;
+} */
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  
+}
+
+.images img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.images img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-image {
+  width: 250px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+
+
+.animated-word {
+      font-size: 34px;
+      font-weight: bold;
+      font-family: 'Arial', sans-serif;
+      color: black;
+      text-shadow: 0 0 10px #dce5e5, 0 0 20px #e6f0f0, 0 0 30px #e3e7e7;
+      animation: popIn 1.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes popIn {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .start {
+      animation-delay: 0s;
+    }
+
+    .end {
+      animation-delay: 2s;
+    }
