@@ -28,7 +28,7 @@ async function main() {
 main(); 
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://collagefrontend.onrender.com",
   methods: ["GET", "POST"],
   credentials: true
 }));
@@ -36,6 +36,11 @@ app.use(cors({
 // ✅ THEN: JSON/body parsing
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
+
 
 
 app.post("/register",wrapasync(async(req,res,next)=>{
