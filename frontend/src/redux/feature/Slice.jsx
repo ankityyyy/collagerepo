@@ -1,12 +1,12 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-
+const BASE_URL = "https://collage-backen.onrender.com";
 export const signup = createAsyncThunk(
   "auth/signup",
   async (userData, thunkAPI) => {
     try {
       const response = await axios.post(
-        "http://localhost:8080/register",
+        `${BASE_URL}/register`,
         userData,
         {
           headers: {
@@ -26,7 +26,7 @@ export const login = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       const response = await axios.post(
-        "http://localhost:8080/login",
+         `${BASE_URL}/login`,
         userData,
         {
           headers: {
